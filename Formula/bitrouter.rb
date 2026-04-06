@@ -1,25 +1,25 @@
 class Bitrouter < Formula
   desc "BitRouter"
   homepage "https://bitrouter.ai"
-  version "0.19.0"
+  version "0.19.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.0/bitrouter-aarch64-apple-darwin.tar.xz"
-      sha256 "c31d08af8425c451fb11753e4f0a9a1d4712adcf5f274736de83687c77d73d17"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.1/bitrouter-aarch64-apple-darwin.tar.xz"
+      sha256 "045286e3a8e36115664dec5fcd4cbfeaf525cdb20054ba6e2a7c0f82a2d8e1bc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.0/bitrouter-x86_64-apple-darwin.tar.xz"
-      sha256 "9330db8b64a51896bb1e0c6cf2a0bfc44eaf921d82a1acc187cf91fdab1d8eb5"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.1/bitrouter-x86_64-apple-darwin.tar.xz"
+      sha256 "5bf170176a7cac5636b3c1f4d0c19c067eb46939bfd92c0394a4cd47d75c1875"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.0/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "64935e2b1b35d7034ef0875b5fc4cb9f1fad8a83e8b0e64e9f68b3f64eff57e3"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.1/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a8f5a1fe835ef78318eeb5e25a001a4c093cbcd763f379bc22fd959e5aad3974"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.0/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d2bf1f3bad5c4996ad2eddcf37f595f0705d5e091389baada0f42fa8e0670993"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v0.19.1/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e0b8a6291b58183be076c15fc8cd3b31b515a1bc23e412c1c7d2669f1cd129b6"
     end
   end
   license "Apache-2.0"
