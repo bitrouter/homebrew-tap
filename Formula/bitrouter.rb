@@ -1,25 +1,25 @@
 class Bitrouter < Formula
   desc "BitRouter: an LLM API router. CLI + TUI + assembly library."
   homepage "https://github.com/bitrouter/bitrouter"
-  version "1.0.0-alpha.25"
+  version "1.0.0-alpha.26"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.25/bitrouter-aarch64-apple-darwin.tar.xz"
-      sha256 "ab16293450260440265259e598c379d580833d57001908825d9062ce917a819d"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-aarch64-apple-darwin.tar.xz"
+      sha256 "b42134ae6e29f8540b5a7056864d7bf3c48461a9abffe138bc8f1106f67e83da"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.25/bitrouter-x86_64-apple-darwin.tar.xz"
-      sha256 "8b320fa9dd7366c83f95e1dcff813e4fdf102cdf2abeca5c474df092bdad7e19"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-x86_64-apple-darwin.tar.xz"
+      sha256 "086685816da42cfc15796498b40a9d0cd562976023a3b6867f73ffc9a2b4d265"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.25/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3e2c4c9afd4c0d3d5535f052356e392a713faabda7aed65cdbc887e930099b50"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6100cfab2b3a023419a73b8ba756768d18cc91144e6597dc36255e77577c2ed6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.25/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "88e9356370f85c9d4ff82c9663a5fafa3e940a10f25e37446fdb21c5e6b14f5b"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a9fa91eaf4e745115ec2d3651412256b6ca0a82c591b231d4fde3150a8122bbc"
     end
   end
   license "Apache-2.0"
