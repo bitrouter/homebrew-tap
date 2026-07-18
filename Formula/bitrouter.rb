@@ -1,25 +1,25 @@
 class Bitrouter < Formula
   desc "BitRouter: an LLM API router. CLI + TUI + assembly library."
   homepage "https://github.com/bitrouter/bitrouter"
-  version "1.0.0-alpha.26"
+  version "1.0.0-alpha.27"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-aarch64-apple-darwin.tar.xz"
-      sha256 "b42134ae6e29f8540b5a7056864d7bf3c48461a9abffe138bc8f1106f67e83da"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-aarch64-apple-darwin.tar.xz"
+      sha256 "5564ea80ea234b350a990c92eb1ca39fabbdda8d4ed27c7b4d56e12a2645a795"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-x86_64-apple-darwin.tar.xz"
-      sha256 "086685816da42cfc15796498b40a9d0cd562976023a3b6867f73ffc9a2b4d265"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-x86_64-apple-darwin.tar.xz"
+      sha256 "e88f2eb9f81b5e1934f65ee4dcd0c1a30f9f9a7f7b63b315e6a4595d0de857b1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6100cfab2b3a023419a73b8ba756768d18cc91144e6597dc36255e77577c2ed6"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b29c3db4a778b94d83e05e3fe320040b8cb39d8ae3ab5db573e1a7477018faa6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a9fa91eaf4e745115ec2d3651412256b6ca0a82c591b231d4fde3150a8122bbc"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "40828c9c9a45d068d3305cfb4f2f1a2e84e968ebcfdcb27e3121363543105c9f"
     end
   end
   license "Apache-2.0"
