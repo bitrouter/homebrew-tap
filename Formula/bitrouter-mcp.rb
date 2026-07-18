@@ -1,25 +1,25 @@
 class BitrouterMcp < Formula
   desc "BitRouter origin MCP server: exposes complete/list_models/status over stdio and streamable HTTP."
   homepage "https://github.com/bitrouter/bitrouter"
-  version "1.0.0-alpha.26"
+  version "1.0.0-alpha.27"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "d36a439b580c41fe60b66eeb44c16af42f4fb42838360927bfc51ce52d73ef6c"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "5dd60074f8e88ec885cd912d9e57a29339d60cb9c54d0f6d07c6e1ec18273501"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "df4e75e0ceec1fccd56c25cfc1ee4a4789ac5392493a207381cc31f09cb0e3f1"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "013dce7b617e7d74915b7fad3b5cc68b635fef86773096b3644c4b4fefa37aac"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e91375f3a0126cd7a2854ab89b685ae9cd3e784eee6e658a390b3f12d98113e8"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bcd67e7b10889ce8edf717e462b6adde6f20847b86e9be97c227ae32a39ef865"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.26/bitrouter-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "05a7f82599a9885e29d4b22a8efe79340dada32d2bcfdbac72de625598ff3abe"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f7e72dfe39238b5043a9499bd8ba0be18b9025c65518904a60fc0aedea34ec4b"
     end
   end
   license "Apache-2.0"
