@@ -1,25 +1,25 @@
 class BitrouterMcp < Formula
   desc "BitRouter origin MCP server: exposes complete/list_models/status over stdio and streamable HTTP."
   homepage "https://github.com/bitrouter/bitrouter"
-  version "1.0.0-alpha.27"
+  version "1.0.0-alpha.28"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "5dd60074f8e88ec885cd912d9e57a29339d60cb9c54d0f6d07c6e1ec18273501"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "7a8e9415868721921e31cb5cdf9d78c77d028fc86bbef365037d15d849999567"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "013dce7b617e7d74915b7fad3b5cc68b635fef86773096b3644c4b4fefa37aac"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "6c0f77aea22383ddb60dceed41d8f51989ba3627256f1294a7f5fc60a72cf037"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bcd67e7b10889ce8edf717e462b6adde6f20847b86e9be97c227ae32a39ef865"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "81c28dd627ccf049ba4f4de2cf291e7e21dd6af5c6c09c3ba3b6dd6bdfaa3983"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f7e72dfe39238b5043a9499bd8ba0be18b9025c65518904a60fc0aedea34ec4b"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c617a752b704484aa06291d4682f35c58912080b7143798deabec61d6be995de"
     end
   end
   license "Apache-2.0"
@@ -50,10 +50,18 @@ class BitrouterMcp < Formula
   end
 
   def install
-    bin.install "mcp-stdio-local" if OS.mac? && Hardware::CPU.arm?
-    bin.install "mcp-stdio-local" if OS.mac? && Hardware::CPU.intel?
-    bin.install "mcp-stdio-local" if OS.linux? && Hardware::CPU.arm?
-    bin.install "mcp-stdio-local" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "mcp-stdio-local"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "mcp-stdio-local"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "mcp-stdio-local"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "mcp-stdio-local"
+    end
 
     install_binary_aliases!
 
