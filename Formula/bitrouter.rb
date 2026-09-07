@@ -1,25 +1,25 @@
 class Bitrouter < Formula
-  desc "BitRouter: an LLM API router. CLI + TUI + assembly library."
+  desc "BitRouter: an LLM API router. CLI + assembly library."
   homepage "https://github.com/bitrouter/bitrouter"
-  version "1.0.0-alpha.27"
+  version "1.0.0-alpha.28"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-aarch64-apple-darwin.tar.xz"
-      sha256 "5564ea80ea234b350a990c92eb1ca39fabbdda8d4ed27c7b4d56e12a2645a795"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-aarch64-apple-darwin.tar.xz"
+      sha256 "b104e5233bf5a6f70f2aeb6b1b81b1e8c182ec78393617e9195cc4aca9920dee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-x86_64-apple-darwin.tar.xz"
-      sha256 "e88f2eb9f81b5e1934f65ee4dcd0c1a30f9f9a7f7b63b315e6a4595d0de857b1"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-x86_64-apple-darwin.tar.xz"
+      sha256 "2a0be1739bf78abbd1858cb42c3200b62b237c0f2d03000bb82a364744dbe0d6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b29c3db4a778b94d83e05e3fe320040b8cb39d8ae3ab5db573e1a7477018faa6"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "20e1fb9fd1158c49e8ec9e24643e2b8ee5e5d8b226c0e471168f245c840eb332"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.27/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "40828c9c9a45d068d3305cfb4f2f1a2e84e968ebcfdcb27e3121363543105c9f"
+      url "https://github.com/bitrouter/bitrouter/releases/download/v1.0.0-alpha.28/bitrouter-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f3f3a6daf91a3bcf337c03fb460bd3c2040b1b541ec28d31767251f9ae69fd69"
     end
   end
   license "Apache-2.0"
@@ -50,10 +50,18 @@ class Bitrouter < Formula
   end
 
   def install
-    bin.install "bitrouter" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bitrouter" if OS.mac? && Hardware::CPU.intel?
-    bin.install "bitrouter" if OS.linux? && Hardware::CPU.arm?
-    bin.install "bitrouter" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "bitrouter"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "bitrouter"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "bitrouter"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "bitrouter"
+    end
 
     install_binary_aliases!
 
